@@ -1,0 +1,16 @@
+{
+  "name": "playlist-copier",
+  "version": "0.1.0",
+  "main": "index.html",
+  "window": {
+    "title": "Playlist Copier",
+    "toolbar": false
+  },
+  "dependencies": {
+    "xml2js": "~0.4.4",
+    "q": "~1.1.2",
+    "sprintf": "~0.1.5",
+    "jquery": "~2.1.3",
+    "fs-extra": "~0.13.0"
+  }
+}

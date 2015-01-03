@@ -1,0 +1,18 @@
+label {
+  color: steelblue;
+}
+
+input[type='button'] {
+  background: steelblue;
+  border: none;
+  color: white;
+}
+
+input[type='button']:disabled {
+  background: lightgray;
+}
+
+.indicator {
+  color: gray;
+  font-size: 10pt;
+}

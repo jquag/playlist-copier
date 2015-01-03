@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="app.css">
+  </head>
+  <body>
+    <p>
+      <label>iTunes library (XML): </label>
+      <input type="file" accept=".xml" id="xml-file"/>
+    </p>
+    <p><input type="button" value="Parse" id="parse" disabled/><span class='indicator' style="display: none;">Parsing...</span></p>
+    <hr/>
+    <div id='playlist-selection' style="display: none;">
+      <p>
+        <label>Playlist</label>
+        <select id='playlist'>
+          <option value=''>-- choose --</option>
+        </select>
+      </p>
+      <p>
+        <label>Destination: </label>
+        <input type='file' accept='' id='destination' webkitdirectory/>
+      </p>
+      <p><input type='button' value='Copy' id='copy' disabled /></p>
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>
