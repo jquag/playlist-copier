@@ -71,6 +71,9 @@
   };
 
   var copyPlaylist = function() {
+    var $input = $(this);
+    toggleButton($input);
+
     var playlist = $('#playlist option:selected').data('playlist');
     var destination = $('#destination').val();
 
@@ -81,8 +84,10 @@
     });
 
     Q.all(copyJobs).then(function() {
+      toggleButton($input);
       alert('all songs successfully copied');
     }, function(err) {
+      toggleButton($input);
       alert(sprintf('One or more songs not copied. There was an issue copying a song: %s', err));
     });
   };

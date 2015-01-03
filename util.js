@@ -56,8 +56,10 @@ var keyTypes = {
   'Skip Date': 'date',
   'Release Date': 'date',
   'Compilation': 'boolean',
+  'Explicit': 'boolean',
   'Sort Artist': 'string',
   'Sort Album Artist': 'string',
+  'Grouping': 'string',
   'Sort Album': 'string',
   'Sort Name': 'string',
   'Track Type': 'string'
