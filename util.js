@@ -51,7 +51,6 @@ var keyTypes = {
 	'Location': 'string',
 	'File Folder Count': 'integer',
 	'Library Folder Count': 'integer',
-  'Skip Count': 'integer',
   'File Type': 'integer',
   'Skip Date': 'date',
   'Release Date': 'date',
@@ -96,6 +95,15 @@ var findElement = function(dict, key) {
   }
 };
 
+var findLocation = function(dict) {
+  for (var i=0; i<dict['string'].length; i++) {
+    if (dict['string'][i].indexOf('file://') == 0) {
+      return dict['string'][i];
+    }
+  }
+  return null;
+};
+
 var Playlist = function(dict) {
   this.name = findElement(dict, 'Name');
   this.songIds = [];
@@ -129,7 +137,7 @@ var Library = function(doc) {
     for (i=0; i<tracks.key.length; i++) {
       if (tracks.key[i] == id) break;
     }
-    return findElement(tracks.dict[i], 'Location');
+    return findLocation(tracks.dict[i]);
   };
 };
 
