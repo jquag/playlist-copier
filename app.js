@@ -83,12 +83,12 @@
       copyJobs.push(copySong(resolveSongPath(source), destination, songId));
     });
 
-    Q.all(copyJobs).then(function() {
+    Q.allSettled(copyJobs).then(function() {
       toggleButton($input);
       alert('all songs successfully copied');
     }, function(err) {
       toggleButton($input);
-      alert(sprintf('One or more songs not copied. There was an issue copying a song: %s', err));
+      alert('There was an issue copying one or more songs');
     });
   };
 
