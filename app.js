@@ -53,7 +53,7 @@
 
   var resolveSongPath = function(uri) {
     var path = decodeURI(uri);
-    return path.replace('file://', '');
+    return path.replace(/file:\/\/(localhost\/)?/, '');
   };
 
   var copySong = function(source, destination, id) {
